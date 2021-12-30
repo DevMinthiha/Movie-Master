@@ -1,0 +1,69 @@
+.filter-container::-webkit-scrollbar {
+    display: none;
+}
+.filter-container {
+    scroll-behavior: smooth;
+}
+
+.filter-container::before,
+.filter-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 100%;
+}
+.filter-container::before {
+    left: 0px;
+    background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0));
+}
+.filter-container::after {
+    right: 0px;
+    background-image: linear-gradient(to left, black, rgba(0, 0, 0, 0));
+}
+
+.filter-container button {
+    transition: all 200ms ease;
+}
+.filter-container button:hover {
+    background-color: #f50000;
+}
+
+.click-left,
+.click-right {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.click-left .slide,
+.click-right .slide {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: -1;
+    transition: all 350ms ease;
+}
+
+.click-left > .slide {
+    right: -100%;
+}
+.click-right > .slide {
+    left: -100%;
+}
+
+.click-left:hover .slide {
+    right: 0;
+}
+.click-left:hover {
+    color: black;
+}
+.click-right:hover .slide {
+    left: 0;
+}
+.click-right:hover {
+    color: black;
+}

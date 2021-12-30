@@ -1,0 +1,29 @@
+.search-filter {
+    border-bottom: 1px solid #131313;
+}
+
+.activeSearch {
+    position: relative;
+}
+.activeSearch::before {
+    --bottom: -20%;
+
+    content: "";
+    position: absolute;
+    bottom: -60%;
+    opacity: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: red;
+    width: 5px;
+    min-height: 5px;
+    border-radius: 50%;
+
+    animation: slideUp 500ms ease forwards;
+}
+
+@media screen and (max-width: 640px) {
+    .activeSearch::before {
+        bottom: -33%;
+    }
+}

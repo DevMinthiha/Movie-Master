@@ -1,0 +1,60 @@
+.contact-input {
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+    border-bottom: 1px solid #a5a5a5;
+}
+textarea {
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+    border-bottom: 1px solid #a5a5a5;
+}
+
+.contact-img-container {
+    width: 47%;
+    overflow: hidden;
+}
+
+.contact-img {
+    height: auto;
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+}
+
+.contact-content {
+    width: 48%;
+    height: max-content;
+}
+
+@media screen and (max-width: 850px) {
+    .contact-img-container {
+        width: 100%;
+        height: 90vh;
+    }
+
+    .contact-content {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .contact-img-container {
+        height: 80vh;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contact-img-container {
+        height: max-content;
+    }
+}
+
+.mail-submit {
+    transition: all 200ms ease;
+}
+.mail-submit:focus,
+.mail-submit:hover {
+    background-color: rgb(194, 3, 3);
+}
